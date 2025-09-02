@@ -1,0 +1,8 @@
+{
+  "servers": [
+    {
+      "name": "server1",
+      "url": "https://www.my-other-service1.com"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+# Windsurf Rules Configuration
+# This file defines project-specific rules and configurations for the ProxyPal project
+
+rules:
+  a: use short responses
+  b: do not comment in code unless asked
+
+# Project metadata
+project:
+  name: "ProxyPal"
+  description: "A modern, type-safe proxy service built with Svelte 5, TypeScript, and Bun"
+  type: "web-application"
+  language: "typescript"
+  framework: "svelte"
+  runtime: "bun"
+  version: "1.0.0"
+
+# Code style and quality rules
+code_style:
+  indent_size: 2
+  quote_style: "single"
+  semi: true
+  trailing_comma: "es5"
+  print_width: 100
+  single_attribute_per_line: true
+  svelte_indent_script_and_style: true
+
+# TypeScript configuration
+typescript:
+  strict: true
+  noImplicitAny: true
+  strictNullChecks: true
+  strictFunctionTypes: true
+  strictBindCallApply: true
+  noUnusedLocals: true
+  noUnusedParameters: true
+  noImplicitReturns: true
+  noFallthroughCasesInSwitch: true
+
+# Svelte specific rules
+svelte:
+  compiler_options:
+    css: true
+    dev: true
+    hydratable: true
+    immutable: true
+    legacy: false
+
+# Testing configuration
+testing:
+  framework: "vitest"
+  coverage:
+    enabled: true
+    threshold: 80
+  watch: true
+
+# Build configuration
+build:
+  output_dir: "dist"
+  sourcemap: true
+  minify: true
+
+# Development server
+dev_server:
+  port: 3000
+  open: true
+  host: "localhost"
+  https: false
+
+# Dependencies management
+dependencies:
+  package_manager: "bun"
+  auto_install: true
+  update_strategy: "patch"
+
+# Git configuration
+git:
+  branch_naming: "^(feature|bugfix|hotfix|release)/[a-z0-9-]+$"
+  commit_message: "^(feat|fix|docs|style|refactor|test|chore|perf|build|ci|revert)(\(.+\))?: .+$"
+  protected_branches:
+    - "main"
+    - "develop"
